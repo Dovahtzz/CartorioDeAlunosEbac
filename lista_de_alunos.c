@@ -110,6 +110,47 @@ int gerenciar()
 	}
 }
 
+int sair()
+{
+	int opcao=0; //definindo variaveis
+	int laco=1;
+	
+	for(laco=1;laco=1;)
+	{
+		
+	setlocale(LC_ALL, "portuguese");
+	
+	printf("\tTem certeza?\n\n");
+	printf("\t1: Sim\n\n");
+	printf("\t2: Não\n\n");
+	
+	scanf("%d", &opcao);
+	
+	system("cls");
+	
+	switch(opcao)
+	{
+		case 1:
+			printf("\tObrigado por usar nosso aplicativo!\n\n");
+        	exit(0);
+        	break;
+	
+    	case 2:
+	    	main();
+	    	break;
+		
+    	default:
+	    	printf("\topção não encontrada\n\n");
+	    	system("pause");
+	    	break;
+	    	
+	}
+	system("cls");
+	system("pause");
+}
+		
+}
+
 int main()
     {
 	int opcao=0; //definindo variaveis
@@ -126,7 +167,8 @@ int main()
     	printf("\tEscolha a opção desejada:\n\n");
     	printf("\t1: Registro\n");
     	printf("\t2: Consulta\n");
-	    printf("\t3: Gerenciar\n\n");
+	    printf("\t3: Gerenciar\n");
+	    printf("\t4: Sair\n\n");
     	printf("opção:"); //fim do menu
 	
     	scanf("%d", &opcao); //armazenando escolha do usuário
@@ -145,6 +187,10 @@ int main()
         	
         	case 3:
         	gerenciar();
+    		break;
+    		
+    		case 4:
+    		sair();
     		break;
     		
     		default:
